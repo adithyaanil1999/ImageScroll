@@ -1,0 +1,145 @@
+html,body{
+    /* height: 100%;
+    width: 100%; */
+    margin: 0;
+    /* background: black; */
+}
+
+.main-containter{
+    height: 100vh;
+    width: 100vw;
+    /* background: blue; */
+    background: rgb(236, 236, 236);
+    margin: 0;
+    overflow: hidden;
+    
+}
+.header-container{
+    overflow: hidden;
+    height: 5%;
+    position: sticky;
+    top: 0;
+    background: rgb(209, 209, 209);
+    box-shadow: 0 0 1vh 1vh rgba(75, 75, 75, 0.301);
+}
+.header-container>h2{
+    margin-left: 10%;
+    margin-bottom: 30px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: rgb(96, 72, 117);
+
+}
+.image-scroll-container{
+    width: 100%; 
+    height: 95%; 
+    /* background: red;   */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+.grid-scroll-container{
+    width: 95%;
+    height: 90%;
+    overflow: hidden;
+
+}
+.image-scroll-grid{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    overflow: scroll;
+    /* grid-template-columns: 25% 25% 25% 25%;
+    grid-template-rows: 33% 33% 33%; */
+}
+
+.image-box{
+    width: 25%;
+    max-height: 33%;
+    z-index: 2;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image-box > img{
+    width: 90%;
+    height: 90%;
+    z-index: 3;
+    border-radius: 5%;
+    transition: all 0.5s;
+    cursor: pointer;
+
+}
+.image-box > img:hover{
+    width: 95%;
+    height: 95%;
+    transition: all 0.5s;
+}
+
+.image-view-cont{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.295);
+    top:0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: fadeIn 1s;
+}
+.close-btn-cont{
+    position: fixed;
+    width: 5%;
+    height: 5%;
+    top: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 2rem;
+
+}
+.close-btn-cont > i{
+    cursor: pointer;
+}
+
+@keyframes fadeIn{
+    from {
+        opacity: 0;
+      }
+    
+      to {
+        opacity: 1;
+      }
+}
+
+.img-view-box{
+    width: 70%;
+    height: 80%;
+    background:white;
+    border-radius: 5%;
+    display: grid;
+    grid-template-columns: 5% 1fr 5%;
+    grid-template-rows: 100%;
+    z-index: 40;
+}
+.img-viewer >img{
+    width: 100%;
+    height: 100%;
+}
+.img-button-cont{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    color:rgb(73, 21, 73);
+}
+
+.img-button-cont > i{
+    cursor: pointer;
+}
